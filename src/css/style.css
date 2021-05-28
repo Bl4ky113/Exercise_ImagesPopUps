@@ -103,6 +103,36 @@
   font: 700 italic 1.2em serif;
 }
 
+.content .article .figure .modal {
+  width: 100%;
+  height: 100%;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+
+  background-color: rgba(0, 0, 0, 0.75);
+
+  /* display: none; */
+}
+
+.content .article .figure .modal .modal__closebtn {
+  position: absolute;
+  top: 1em;
+  right: 2em;
+}
+
+.content .article .figure .modal .modal__closebtn > i {
+  color: rgba(255, 255, 255, 0.6);
+  font: 600 2.5em 'FontAwesome';
+}
+
+.content .article .figure .modal .modal__closebtn:hover,
+.content .article .figure .modal .modal__closebtn:focus {
+  cursor: pointer;
+}
+
 .footer {
   width: 100%;
   height: 20vh;
@@ -120,7 +150,7 @@
 
 @media screen and (max-width: 735px) {
   body { font-size: 14px; }
-  
+
   .wrapper {
     grid-template: auto 1fr auto / repeat(3, 1fr);
 
