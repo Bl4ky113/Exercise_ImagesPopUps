@@ -14,6 +14,13 @@ for (let i = 0 ; i < images.length ; i++) {
       modal = info.target.nextElementSibling
       modal.style.display = "block";
 
+      // Cerrar el Modal
+      closeBtn = modal.children[0];
+      closeBtn.addEventListener("click", () => {
+        modal.style.display = "none";
+      })
+
+      // Dar Src y Alt a Fig de Modal
       figure = modal.children[1];
       figureImg = figure.children[0];
       figureCaption = figure.children[1];
