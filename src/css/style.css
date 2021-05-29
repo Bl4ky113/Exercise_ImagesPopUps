@@ -107,8 +107,6 @@
   width: 100%;
   height: 100%;
 
-  padding: 1em 0.5em;
-
   position: fixed;
   top: 0;
   left: 0;
@@ -120,13 +118,14 @@
   justify-content: center;
   align-items: center;
 
+  grid-template: 3em 1fr / 3em 1fr 3em;
+
   overflow: auto;
 }
 
 .content .article .figure .modal .modal__closebtn {
-  position: absolute;
-  top: 1em;
-  right: 2em;
+  grid-column: -1 / -2;
+  grid-row: 1 / 2;
 }
 
 .content .article .figure .modal .modal__closebtn > i {
@@ -141,11 +140,9 @@
 }
 
 .content .article .figure .modal .modal-figure {
-  width: 80%;
-  height: auto;
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
 
-  margin: 1em auto;
-  
   display: grid;
   grid-template: 1fr auto / 1fr;
 
@@ -154,9 +151,12 @@
 }
 
 .content .article .figure .modal .modal-figure .modal-figure__content {
-  max-width: 80%;
+  min-width: 35vw;
+  max-width: 85vw;
+  max-height: 100vh;
 
   border: 0.25em double rgba(255, 255, 255, 0.6);
+  padding: 0.5em;
 
   grid-column: span 1;
   grid-row: span 1;
@@ -274,9 +274,22 @@
                          "footer  footer  footer";
   }
 
-  .content .article .figure .modal { width: auto; }
-  .content .article .figure .modal .modal-figure { width: 100%; }
-  .content .article .figure .modal .modal-figure .modal-figure__content { width: 100%; }
+  .content .article .figure .modal {
+    grid-template: 4em 1fr / 1fr 4em;
+  }
+
+  .content .article .figure .modal .modal-figure { 
+    width: 100vw; 
+
+    grid-column: span 2;
+  }
+
+  .content .article .figure .modal .modal-figure .modal-figure__content { 
+    max-width: 96vw; 
+
+    border: none;
+    padding: none;
+  }
 }
 
 @media screen and (max-width: 400px) {

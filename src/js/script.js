@@ -12,7 +12,7 @@ for (let i = 0 ; i < images.length ; i++) {
   images[i].addEventListener("click", (info) => {
     if (info.target.nextElementSibling.className == "modal") {
       modal = info.target.nextElementSibling
-      modal.style.display = "flex";
+      modal.style.display = "grid";
 
       // Cerrar el Modal
       closeBtn = modal.children[0];
@@ -27,6 +27,8 @@ for (let i = 0 ; i < images.length ; i++) {
 
       figureImg.src = info.target.src;
       figureCaption.innerHTML = info.target.alt;
+
+      // 
     }
   })
 }
