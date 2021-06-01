@@ -152,7 +152,7 @@
 
 .content .article .figure .modal .modal-figure .modal-figure__content {
   min-width: 35vw;
-  max-width: 85vw;
+  max-width: 65vw;
   max-height: 100vh;
 
   border: 0.25em double rgba(255, 255, 255, 0.6);
